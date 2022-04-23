@@ -1,7 +1,7 @@
 ------------------------------------------------
 -- This Source Was Developed By (DAHOOM) @mooa322.--
 --   This Is The Source Channel @mooa_322 .   --
---                - B𝗹𝗮𝗰𝗸𝗽𝗶𝗻𝗸-                 --
+--                - DAHOOM-                 --
 --        -- https://t.me/mooa322 --         --
 ------------------------------------------------ 
 URL     = require("./libs/url")
@@ -716,12 +716,12 @@ else
 UserInfousername = '['..UserInfo.first_name..'](tg://user?id='..UserId..')'
 end
 return {
-Lock     = '[B𝗹𝗮𝗰𝗸𝗽𝗶𝗻𝗸](https://t.me/mooa322)\n*— — — — — — — — —\n᥀︙بواسطه ← *'..UserInfousername..'\n*'..TextMsg..'\n᥀︙خاصيه المسح *',
-unLock   = '[B𝗹𝗮𝗰𝗸𝗽𝗶𝗻𝗸](https://t.me/mooa322)\n*— — — — — — — — —\n᥀︙بواسطه ← *'..UserInfousername..'\n'..TextMsg,
-lockKtm  = '[B𝗹𝗮𝗰𝗸𝗽𝗶𝗻𝗸](https://t.me/mooa322)\n*— — — — — — — — —\n᥀︙بواسطه ← *'..UserInfousername..'\n*'..TextMsg..'\n᥀︙خاصيه الكتم *',
-lockKid  = '[B𝗹𝗮𝗰𝗸𝗽𝗶𝗻𝗸](https://t.me/mooa322)\n*— — — — — — — — —\n᥀︙بواسطه ← *'..UserInfousername..'\n*'..TextMsg..'\n᥀︙خاصيه التقييد *',
-lockKick = '[B𝗹𝗮𝗰𝗸𝗽𝗶𝗻𝗸](https://t.me/mooa322)\n*— — — — — — — — —\n᥀︙بواسطه ← *'..UserInfousername..'\n*'..TextMsg..'\n᥀︙خاصيه الطرد *',
-Reply    = '[B𝗹𝗮𝗰𝗸𝗽𝗶𝗻𝗸](https://t.me/mooa322)\n*— — — — — — — — —\n᥀︙المستخدم ← *'..UserInfousername..'\n*'..TextMsg..'*'
+Lock     = '[DAHOOM](https://t.me/mooa322)\n*— — — — — — — — —\n᥀︙بواسطه ← *'..UserInfousername..'\n*'..TextMsg..'\n᥀︙خاصيه المسح *',
+unLock   = '[DAHOOM](https://t.me/mooa322)\n*— — — — — — — — —\n᥀︙بواسطه ← *'..UserInfousername..'\n'..TextMsg,
+lockKtm  = '[DAHOOM](https://t.me/mooa322)\n*— — — — — — — — —\n᥀︙بواسطه ← *'..UserInfousername..'\n*'..TextMsg..'\n᥀︙خاصيه الكتم *',
+lockKid  = '[DAHOOM](https://t.me/mooa322)\n*— — — — — — — — —\n᥀︙بواسطه ← *'..UserInfousername..'\n*'..TextMsg..'\n᥀︙خاصيه التقييد *',
+lockKick = '[DAHOOM](https://t.me/mooa322)\n*— — — — — — — — —\n᥀︙بواسطه ← *'..UserInfousername..'\n*'..TextMsg..'\n᥀︙خاصيه الطرد *',
+Reply    = '[DAHOOM](https://t.me/mooa322)\n*— — — — — — — — —\n᥀︙المستخدم ← *'..UserInfousername..'\n*'..TextMsg..'*'
 }
 end
 function StatusCanOrNotCan(ChatId,UserId)
@@ -1575,7 +1575,7 @@ data = {
 {text = '- الغاء الامر', data = msg.sender.user_id..'/delamrredis'},
 },
 {
-{text = 'B𝗹𝗮𝗰𝗸𝗽𝗶𝗻𝗸 ⁦', url='https://t.me/mooa322'},
+{text = 'DAHOOM ⁦', url='https://t.me/mooa322'},
 },
 }
 }
@@ -1772,7 +1772,7 @@ data = {
 {text = '- الغاء الامر', data = msg.sender.user_id..'/delamrredis'},
 },
 {
-{text = 'B𝗹𝗮𝗰𝗸𝗽𝗶𝗻𝗸 ⁦', url='https://t.me/mooa322'},
+{text = 'DAHOOM ⁦', url='https://t.me/mooa322'},
 },
 }
 }
@@ -2046,7 +2046,7 @@ data = {
 {text = '- الغاء الامر', data = msg.sender.user_id..'/delamrredis'},
 },
 {
-{text = 'B𝗹𝗮𝗰𝗸𝗽𝗶𝗻𝗸 ⁦', url='https://t.me/mooa322'},
+{text = 'DAHOOM ⁦', url='https://t.me/mooa322'},
 },
 }
 }
@@ -2643,7 +2643,7 @@ data = {
 {text = '‹ تفعيل الايدي ›', data = msg.sender.user_id..'/'.. 'mute_IdPhoto'},
 },
 {
-{text = 'B𝗹𝗮𝗰𝗸𝗽𝗶𝗻𝗸', url = 't.me/mooa322'},
+{text = 'DAHOOM', url = 't.me/mooa322'},
 },
 }
 }
@@ -2726,7 +2726,7 @@ data = {
 {text = '‹ تفعيل الايدي ›', data = msg.sender.user_id..'/'.. 'mute_IdPhoto'},
 },
 {
-{text = 'B𝗹𝗮𝗰𝗸𝗽𝗶𝗻𝗸', url = 't.me/mooa322'},
+{text = 'DAHOOM', url = 't.me/mooa322'},
 },
 }
 }
@@ -4535,7 +4535,7 @@ data = {
 {text = '- الغاء الامر', data = msg.sender.user_id..'/delamrredis'},
 },
 {
-{text = 'B𝗹𝗮𝗰𝗸𝗽𝗶𝗻𝗸', url='https://t.me/mooa322'},
+{text = 'DAHOOM', url='https://t.me/mooa322'},
 },
 }
 }
@@ -6259,7 +6259,7 @@ local TestText = "  ❲ Owner Groups ❳\n— — — — — — — — —\n 
 keyboardd = {} 
 keyboardd.inline_keyboard = {
 {
-{text = '❲ B𝗹𝗮𝗰𝗸𝗽𝗶𝗻𝗸 ❳', url = "https://t.me/mooa322"}
+{text = '❲ DAHOOM ❳', url = "https://t.me/mooa322"}
 },
 }
 local msg_id = msg.id/2097152/0.5 
@@ -6665,7 +6665,7 @@ keyboard.inline_keyboard = {
 {text = ': مره اخرى 🔃.', callback_data = IdUser..'/Re@'},
 },
 {
-{text = '❲ B𝗹𝗮𝗰𝗸𝗽𝗶𝗻𝗸 ❳',url="t.me/mooa322"}
+{text = '❲ DAHOOM ❳',url="t.me/mooa322"}
 },
 }
 local msg_id = msg.id/2097152/0.5
@@ -6676,7 +6676,7 @@ Abs = math.random(2,140);
 local Text ='*᥀︙تم اختيار متحركه لك*'
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '❲ B𝗹𝗮𝗰𝗸𝗽𝗶𝗻𝗸 ❳',url="t.me/mooa322"}},
+{{text = '❲ DAHOOM ❳',url="t.me/mooa322"}},
 }
 local msg_id = msg.id/2097152/0.5
 https.request("https://api.telegram.org/bot"..Token..'/sendanimation?chat_id=' .. msg.chat_id .. '&animation=https://t.me/GifDavid/'..Abs..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
@@ -6686,7 +6686,7 @@ Abs = math.random(2,140);
 local Text ='*᥀︙تم اختيار الشعر لك فقط*'
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '❲ B𝗹𝗮𝗰𝗸𝗽𝗶𝗻𝗸 ❳',url="t.me/mooa322"}},
+{{text = '❲ DAHOOM ❳',url="t.me/mooa322"}},
 }
 local msg_id = msg.id/2097152/0.5
 https.request("https://api.telegram.org/bot"..Token..'/sendVoice?chat_id=' .. msg.chat_id .. '&voice=https://t.me/L1BBBL/'..Abs..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
@@ -6696,7 +6696,7 @@ Abs = math.random(2,140);
 local Text ='*᥀︙تم اختيار الميمز لك فقط*'
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '❲ B𝗹𝗮𝗰𝗸𝗽𝗶𝗻𝗸 ❳',url="t.me/mooa322"}},
+{{text = '❲ DAHOOM ❳',url="t.me/mooa322"}},
 }
 local msg_id = msg.id/2097152/0.5
 https.request("https://api.telegram.org/bot"..Token..'/sendVoice?chat_id=' .. msg.chat_id .. '&voice=https://t.me/remixsource/'..Abs..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
@@ -6707,7 +6707,7 @@ local Text ='*᥀︙تم اختيار ريمكس لك*'
 keyboardd = {} 
 keyboardd.inline_keyboard = {
 {
-{text = '❲ B𝗹𝗮𝗰𝗸𝗽𝗶𝗻𝗸 ❳', url = "https://t.me/mooa322"}
+{text = '❲ DAHOOM ❳', url = "https://t.me/mooa322"}
 },
 }
 local msg_id = msg.id/2097152/0.5
@@ -6719,7 +6719,7 @@ local Text ='*᥀︙تم اختيار الفلم لك*'
 keyboardd = {} 
 keyboardd.inline_keyboard = {
 {
-{text = '❲ B𝗹𝗮𝗰𝗸𝗽𝗶𝗻𝗸 ❳', url = "https://t.me/mooa322"}
+{text = '❲ DAHOOM ❳', url = "https://t.me/mooa322"}
 },
 }
 local msg_id = msg.id/2097152/0.5
@@ -6731,7 +6731,7 @@ local Text ='*᥀︙تم اختيار انمي لك*'
 keyboardd = {} 
 keyboardd.inline_keyboard = {
 {
-{text = '❲ B𝗹𝗮𝗰𝗸𝗽𝗶𝗻𝗸 ❳', url = "https://t.me/mooa322"}
+{text = '❲ DAHOOM ❳', url = "https://t.me/mooa322"}
 },
 }
 local msg_id = msg.id/2097152/0.5
@@ -6742,7 +6742,7 @@ Abs = math.random(2,140);
 local Text ='*᥀︙تم اختيار الاغنيه لك*'
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '❲ B𝗹𝗮𝗰𝗸𝗽𝗶𝗻𝗸 ❳',url="t.me/mooa322"}},
+{{text = '❲ DAHOOM ❳',url="t.me/mooa322"}},
 }
 local msg_id = msg.id/2097152/0.5
 https.request("https://api.telegram.org/bot"..Token..'/sendVoice?chat_id=' .. msg.chat_id .. '&voice=https://t.me/lDIDIl/'..Abs..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
@@ -6753,7 +6753,7 @@ local Text ='*᥀︙تم اختيار صور*'
 keyboardd = {} 
 keyboardd.inline_keyboard = {
 {
-{text = '❲ B𝗹𝗮𝗰𝗸𝗽𝗶𝗻𝗸 ❳', url = "https://t.me/mooa322"}
+{text = '❲ DAHOOM ❳', url = "https://t.me/mooa322"}
 },
 }
 local msg_id = msg.id/2097152/0.5
@@ -8433,7 +8433,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = '- قناة السورس', url = 't.me/mooa322'}, 
+{text = '- قناة السورس', url = 't.me/mooa_322'}, 
 },
 }
 }
@@ -9790,7 +9790,7 @@ local TestText = "  ❲ DAHOOM 𝖲𝗈𝗎𝗋𝖼𝖾 ❳\n— — — — —
 keyboardd = {} 
 keyboardd.inline_keyboard = {
 {
-{text = '❲ B𝗹𝗮𝗰𝗸𝗽𝗶𝗻𝗸 ❳', url = "https://t.me/mooa322"}
+{text = '❲ DAHOOM ❳', url = "https://t.me/mooa322"}
 },
 }
 local msg_id = msg.id/2097152/0.5 
@@ -9803,7 +9803,7 @@ keyboardd.inline_keyboard = {
 {text = '❲ 𝖼𝗈𝖽𝖾𝗋 ❳', url = "https://t.me/mooa322"}
 },
 {
-{text = '❲ B𝗹𝗮𝗰𝗸𝗽𝗶𝗻𝗸 ❳', url = "https://t.me/mooa322"},
+{text = '❲ DAHOOM ❳', url = "https://t.me/mooa322"},
 },
 }
 local msg_id = msg.id/2097152/0.5 
@@ -9825,7 +9825,7 @@ local TestText = "  ❲ Developers Bot ❳\n— — — — — — — — —\
 keyboardd = {} 
 keyboardd.inline_keyboard = {
 {
-{text = '❲ B𝗹𝗮𝗰𝗸𝗽𝗶𝗻𝗸 ❳', url = "https://t.me/mooa322"}
+{text = '❲ DAHOOM ❳', url = "https://t.me/mooa322"}
 },
 }
 local msg_id = msg.id/2097152/0.5 
@@ -9896,7 +9896,7 @@ data = {
 {text = 'Facebook', url = 'https://www.facebook.com/help/deleteaccount'},{text = 'Snapchat', url = 'https://accounts.snapchat.com/accounts/login?continue=https%3A%2F%2Faccounts.snapchat.com%2Faccounts%2Fdeleteaccount'}
 },
 {
-{text = '˛ B𝗹𝗮𝗰𝗸𝗽𝗶𝗻𝗸 .', url = 't.me/mooa322'}, 
+{text = '˛ DAHOOM .', url = 't.me/mooa322'}, 
 },
 }
 }
@@ -9955,7 +9955,7 @@ data = {
 {text = 'اوامر القفل الفتح', data = msg.sender.user_id..'/NoNextSeting'}, {text = '  اوامر التعطيل التفعيل  ', data = msg.sender.user_id..'/listallAddorrem'}, 
 },
 {
-{text = '- قناة السورس', url = 't.me/mooa322'}, 
+{text = '- قناة السورس', url = 't.me/mooa_322'}, 
 },
 }
 }
@@ -9983,7 +9983,7 @@ data = {
 {text = '{ قائمه الاوامر }', data = msg.sender.user_id..'/helpall'},
 },
 {
-{text = '- قناة السورس', url = 't.me/mooa322'}, 
+{text = '- قناة السورس', url = 't.me/mooa_322'}, 
 },
 }
 }
@@ -10003,7 +10003,7 @@ data = {
 {text = '{ قائمه الاوامر }', data = msg.sender.user_id..'/helpall'},
 },
 {
-{text = '- قناة السورس', url = 't.me/mooa322'}, 
+{text = '- قناة السورس', url = 't.me/mooa_322'}, 
 },
 }
 }
@@ -10023,7 +10023,7 @@ data = {
 {text = '{ قائمه الاوامر }', data = msg.sender.user_id..'/helpall'},
 },
 {
-{text = '- قناة السورس', url = 't.me/mooa322'}, 
+{text = '- قناة السورس', url = 't.me/mooa_322'}, 
 },
 }
 }
@@ -10043,7 +10043,7 @@ data = {
 {text = '{ قائمه الاوامر }', data = msg.sender.user_id..'/helpall'},
 },
 {
-{text = '- قناة السورس', url = 't.me/mooa322'}, 
+{text = '- قناة السورس', url = 't.me/mooa_322'}, 
 },
 }
 }
@@ -10063,7 +10063,7 @@ data = {
 {text = '{ قائمه الاوامر }', data = msg.sender.user_id..'/helpall'},
 },
 {
-{text = '- قناة السورس', url = 't.me/mooa322'}, 
+{text = '- قناة السورس', url = 't.me/mooa_322'}, 
 },
 }
 }
@@ -10077,7 +10077,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = 'B𝗹𝗮𝗰𝗸𝗽𝗶𝗻𝗸', url = 't.me/mooa322'}, 
+{text = 'DAHOOM', url = 't.me/mooa322'}, 
 },
 }
 }
@@ -10091,7 +10091,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = 'B𝗹𝗮𝗰𝗸𝗽𝗶𝗻𝗸', url = 't.me/mooa322'}, 
+{text = 'DAHOOM', url = 't.me/mooa322'}, 
 },
 }
 }
@@ -10106,7 +10106,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = 'B𝗹𝗮𝗰𝗸𝗽𝗶𝗻𝗸', url = 't.me/mooa322'}, 
+{text = 'DAHOOM', url = 't.me/mooa322'}, 
 },
 }
 }
@@ -10121,7 +10121,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = 'B𝗹𝗮𝗰𝗸𝗽𝗶𝗻𝗸', url = 't.me/mooa322'}, 
+{text = 'DAHOOM', url = 't.me/mooa322'}, 
 },
 }
 }
@@ -10136,7 +10136,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = 'B𝗹𝗮𝗰𝗸𝗽𝗶𝗻𝗸', url = 't.me/mooa322'}, 
+{text = 'DAHOOM', url = 't.me/mooa322'}, 
 },
 }
 }
@@ -10151,7 +10151,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = 'B𝗹𝗮𝗰𝗸𝗽𝗶𝗻𝗸', url = 't.me/mooa322'}, 
+{text = 'DAHOOM', url = 't.me/mooa322'}, 
 },
 }
 }
@@ -10166,7 +10166,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = 'B𝗹𝗮𝗰𝗸𝗽𝗶𝗻𝗸', url = 't.me/mooa322'}, 
+{text = 'DAHOOM', url = 't.me/mooa322'}, 
 },
 }
 }
@@ -10181,7 +10181,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = 'B𝗹𝗮𝗰𝗸𝗽𝗶𝗻𝗸', url = 't.me/mooa322'}, 
+{text = 'DAHOOM', url = 't.me/mooa322'}, 
 },
 }
 }
@@ -10196,7 +10196,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = 'B𝗹𝗮𝗰𝗸𝗽𝗶𝗻𝗸', url = 't.me/mooa322'}, 
+{text = 'DAHOOM', url = 't.me/mooa322'}, 
 },
 }
 }
@@ -10210,7 +10210,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = 'B𝗹𝗮𝗰𝗸𝗽𝗶𝗻𝗸', url = 't.me/mooa322'}, 
+{text = 'DAHOOM', url = 't.me/mooa322'}, 
 },
 }
 }
@@ -10225,7 +10225,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = 'B𝗹𝗮𝗰𝗸𝗽𝗶𝗻𝗸', url = 't.me/mooa322'}, 
+{text = 'DAHOOM', url = 't.me/mooa322'}, 
 },
 }
 }
@@ -10240,7 +10240,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = 'B𝗹𝗮𝗰𝗸𝗽𝗶𝗻𝗸', url = 't.me/mooa322'}, 
+{text = 'DAHOOM', url = 't.me/mooa322'}, 
 },
 }
 }
@@ -10255,7 +10255,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = 'B𝗹𝗮𝗰𝗸𝗽𝗶𝗻𝗸', url = 't.me/mooa322'}, 
+{text = 'DAHOOM', url = 't.me/mooa322'}, 
 },
 }
 }
@@ -10270,7 +10270,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = 'B𝗹𝗮𝗰𝗸𝗽𝗶𝗻𝗸', url = 't.me/mooa322'}, 
+{text = 'DAHOOM', url = 't.me/mooa322'}, 
 },
 }
 }
@@ -10286,7 +10286,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = 'B𝗹𝗮𝗰𝗸𝗽𝗶𝗻𝗸', url = 't.me/mooa322'}, 
+{text = 'DAHOOM', url = 't.me/mooa322'}, 
 },
 }
 }
@@ -10300,7 +10300,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = 'B𝗹𝗮𝗰𝗸𝗽𝗶𝗻𝗸', url = 't.me/mooa322'}, 
+{text = 'DAHOOM', url = 't.me/mooa322'}, 
 },
 }
 }
@@ -10315,7 +10315,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = 'B𝗹𝗮𝗰𝗸𝗽𝗶𝗻𝗸', url = 't.me/mooa322'}, 
+{text = 'DAHOOM', url = 't.me/mooa322'}, 
 },
 }
 }
@@ -10359,20 +10359,20 @@ end
 if text == (Redis:get(TheDAHOOM.."DAHOOM:Name:Bot") or "دحوم") then
 local NamesBot = (Redis:get(TheDAHOOM.."DAHOOM:Name:Bot") or "دحوم")
 local NameBots = {
-"ها "..NamesBot.. " شتريد؟",
+"ها شتريد؟",
 "اكتب بوت وراح تطلعلك قائمة المساعدة",
 "",
-"تبي تلعب معي ؟!",
-"ابعد عني فيك كورونا 😒 "..NamesBot,
-'عيون دحوم امر تدلل'
+"تبي تلعب معي ؟!"
+"ابعد عني فيك كورونا 😒 "
+"عيون دحوم امر تدلل"
 }
 return LuaTele.sendText(msg_chat_id,msg_id, NameBots[math.random(#NameBots)],"md",true)  
 end
 if text == "بوت" then
-local NamesBot = (Redis:get(TheDAHOOM.."DAHOOM:Name:Bot") or "دحوم")
+local NamesBot = (Redis:get(TheDAHOOM.."DAHOOM:Name:Bot") or "!!")
 local BotName = {
-"وش تبي "..NamesBot,
-"لاتناديني بوت ياقليل الادب "..NamesBot.. "",
+"تراك زودتها يانشبه !! "
+"لاتناديني بوت ياقليل الادب "
 "اذلف وفكني منك"
 }
 return LuaTele.sendText(msg_chat_id,msg_id,BotName[math.random(#BotName)],"md",true)   
@@ -11322,7 +11322,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = '᥀ السورس .', url = 't.me/mooa322'},{text = '᥀ لتنصيب بوت .', url = 't.me/mooa322'}, 
+{text = '᥀ قناة السورس .', url = 't.me/mooa_322'},{text = '᥀ لتنصيب بوت .', url = 't.me/mooa322'}, 
 },
 {
 {text = '᥀ اضفني في مجموعتك .', url = 't.me/'..UserBot..'?startgroup=new'}, 
@@ -11335,7 +11335,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = '᥀ السورس .', url = 't.me/mooa322'},{text = '᥀ لتنصيب بوت .', url = 't.me/mooa322'}, 
+{text = '᥀ قناة السورس .', url = 't.me/mooa_322'},{text = '᥀ لتنصيب بوت .', url = 't.me/mooa322'}, 
 },
 {
 {text = '᥀ اضفني في مجموعتك .', url = 't.me/'..UserBot..'?startgroup=new'}, 
@@ -12176,7 +12176,7 @@ keyboard.inline_keyboard = {
 {text = ': مره اخرى 🔃.', callback_data = IdUser..'/Re@'},
 },
 {
-{text = '❲ B𝗹𝗮𝗰𝗸𝗽𝗶𝗻𝗸 ❳',url="t.me/mooa322"}
+{text = '❲ DAHOOM ❳',url="t.me/mooa322"}
 },
 }
 https.request("https://api.telegram.org/bot"..Token..'/sendVoice?chat_id=' .. ChatId .. '&voice=https://t.me/TEAMSUL/'..Abs..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
@@ -12454,7 +12454,7 @@ data = {
 {text = 'القائمه الرئيسيه ', data = IdUser..'/helpall'},
 },
 {
-{text = '- قناة السورس', url = 't.me/mooa322'}, 
+{text = '- قناة السورس', url = 't.me/mooa_322'}, 
 },
 }
 }
@@ -12512,7 +12512,7 @@ data = {
 {text = 'القائمه الرئيسيه ', data = IdUser..'/helpall'},
 },
 {
-{text = '- قناة السورس', url = 't.me/mooa322'}, 
+{text = '- قناة السورس', url = 't.me/mooa_322'}, 
 },
 }
 }
@@ -12571,7 +12571,7 @@ data = {
 {text = 'القائمه الرئيسيه ', data = IdUser..'/helpall'},
 },
 {
-{text = '- قناة السورس', url = 't.me/mooa322'}, 
+{text = '- قناة السورس', url = 't.me/mooa_322'}, 
 },
 }
 }
@@ -12624,7 +12624,7 @@ data = {
 {text = 'القائمه الرئيسيه ', data = IdUser..'/helpall'},
 },
 {
-{text = '- قناة السورس', url = 't.me/mooa322'}, 
+{text = '- قناة السورس', url = 't.me/mooa_322'}, 
 },
 }
 }
@@ -12664,7 +12664,7 @@ data = {
 {text = 'القائمه الرئيسيه ', data = IdUser..'/helpall'},
 },
 {
-{text = '- قناة السورس', url = 't.me/mooa322'}, 
+{text = '- قناة السورس', url = 't.me/mooa_322'}, 
 },
 }
 }
@@ -12719,7 +12719,7 @@ data = {
 {text = 'القائمه الرئيسيه ', data = IdUser..'/helpall'},
 },
 {
-{text = '- قناة السورس', url = 't.me/mooa322'}, 
+{text = '- قناة السورس', url = 't.me/mooa_322'}, 
 },
 }
 }
@@ -12760,7 +12760,7 @@ data = {
 {text = 'القائمه الرئيسيه ', data = IdUser..'/helpall'},
 },
 {
-{text = '- قناة السورس', url = 't.me/mooa322'}, 
+{text = '- قناة السورس', url = 't.me/mooa_322'}, 
 },
 }
 }
