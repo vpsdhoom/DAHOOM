@@ -613,9 +613,6 @@ end
 if Get_Chat.permissions.can_pin_messages then
 pin = true else pin = false
 end
-if Get_Chat.permissions.can_send_Med_messages then
-Med = true else Med = false
-end
 if Get_Chat.permissions.can_send_messages then
 messges = true else messges = false
 end
@@ -631,7 +628,6 @@ web = web,
 info = info,
 invite = invite,
 pin = pin,
-Med = Med,
 messges = messges,
 other = other,
 polls = polls
@@ -650,9 +646,6 @@ invite = '❬ ✔️ ❭' else invite = '❬ ❌ ❭'
 end
 if Get_Chat.permissions.can_pin_messages then
 pin = '❬ ✔️ ❭' else pin = '❬ ❌ ❭'
-end
-if Get_Chat.permissions.can_send_Med_messages then
-Med = '❬ ✔️ ❭' else Med = '❬ ❌ ❭'
 end
 if Get_Chat.permissions.can_send_messages then
 messges = '❬ ✔️ ❭' else messges = '❬ ❌ ❭'
@@ -677,9 +670,6 @@ data = {
 },
 {
 {text = '- تثبيت الرسائل : '..pin, data = UserId.. '/pin'}, 
-},
-{
-{text = '- ارسال الميديا : '..Med, data = UserId.. '/Med'}, 
 },
 {
 {text = '- ارسال الرسائل : .'..messges, data = UserId.. '/messges'}, 
@@ -1998,13 +1988,7 @@ if Redis:get(TheDAHOOM.."DAHOOM:Broadcasting:Users:Fwd" .. msg_chat_id .. ":" ..
 if text == "الغاء" or text == 'الغاء الامر ⌔' then   
 Redis:del(TheDAHOOM.."DAHOOM:Broadcasting:Users:Fwd" .. msg_chat_id .. ":" .. msg.sender.user_id) 
 return LuaTele.sendText(msg_chat_id,msg_id, "\n᥀︙تم الغاء الاذاعه بالتوجيه خاص","md",true)    
-end 
-if msg.forward_info then 
-local list = Redis:smembers(TheDAHOOM.."DAHOOM:Num:User:Pv")   
-LuaTele.sendText(msg_chat_id,msg_id,"᥀︙تم التوجيه الى *- "..#list.." * مجموعه في البوت ","md",true) 
-for k,v in pairs(list) do  
-LuaTele.forwardMessages(v, msg_chat_id, msg_id,0,1,msg.Med_album_id,false,true)
-end   
+end
 Redis:del(TheDAHOOM.."DAHOOM:Broadcasting:Users:Fwd" .. msg_chat_id .. ":" .. msg.sender.user_id) 
 end 
 return false
@@ -4773,20 +4757,6 @@ Textes = math.random(#texting)
  LuaTele.sendText(msg_chat_id,msg_id,texting[Textes])
 end
 end
- 
-if msg.content.video_note or msg.content.document or msg.content.audio or msg.content.video or msg.content.voice_note or msg.content.sticker or msg.content.animation or msg.content.photo then      
-Redis:sadd(TheDAHOOM.."DAHOOM:allM"..msg.chat_id, msg.id)
-if Redis:get(TheDAHOOM.."DAHOOM:Status:Del:Med"..msg.chat_id) then    
-local gMed = Redis:scard(TheDAHOOM.."DAHOOM:allM"..msg.chat_id)  
-if gMed >= 200 then
-local liste = Redis:smembers(TheDAHOOM.."DAHOOM:allM"..msg.chat_id)
-for k,v in pairs(liste) do
-local Mesge = v
-if Mesge then
-t = "᥀︙تم مسح "..k.." من الوسائط تلقائيا\n᥀︙يمكنك تعطيل الميزه بستخدام الامر ( `تعطيل المسح التلقائي` )"
-LuaTele.deleteMessages(msg.chat_id,{[1]= Mesge})
-end
-end
 LuaTele.sendText(msg_chat_id,msg_id, t)
 Redis:del(TheDAHOOM.."DAHOOM:allM"..msg.chat_id)
 end
@@ -4822,18 +4792,10 @@ if text == "تعطيل المسح التلقائي" then
 if not msg.TheBasics then
 return LuaTele.sendText(msg_chat_id,msg_id,'\n*᥀︙هاذا الامر يخص { '..Controller_Num(4)..' }* ',"md",true)  
 end
-Redis:del(TheDAHOOM.."DAHOOM:Status:Del:Med"..msg.chat_id)
- LuaTele.sendText(msg_chat_id,msg_id,'᥀︙تم تعطيل المسح التلقائي للميديا')
-return false
-end 
 if text == "تفعيل المسح التلقائي" then        
 if not msg.TheBasics then
 return LuaTele.sendText(msg_chat_id,msg_id,'\n*᥀︙هاذا الامر يخص { '..Controller_Num(4)..' }* ',"md",true)  
 end
-Redis:set(TheDAHOOM.."DAHOOM:Status:Del:Med"..msg.chat_id,true)
-LuaTele.sendText(msg_chat_id,msg_id,'᥀︙تم تفعيل المسح التلقائي للميديا')
-return false
-end 
 if text == "تعطيل اليوتيوب" then        
 if not msg.Managers then
 return LuaTele.sendText(msg_chat_id,msg_id,'\n*᥀︙هاذا الامر يخص { '..Controller_Num(6)..' }* ',"md",true)  
@@ -6735,7 +6697,7 @@ keyboardd.inline_keyboard = {
 },
 }
 local msg_id = msg.id/2097152/0.5
-https.request("https://api.telegram.org/bot"..Token..'/sendphoto?chat_id=' .. msg.chat_id .. '&photo=https://t.me/AniMedavid/'..Abs..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+https.request("https://api.telegram.org/bot"..Token..'/sendphoto?chat_id=' .. msg.chat_id .. '&photo=/'..Abs..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
 if text == "اغنيه" then
 Abs = math.random(2,140); 
@@ -8524,9 +8486,6 @@ end
 if Get_Chat.permissions.can_pin_messages then
 pin = '❬ ✔️ ❭' else pin = '❬ ❌ ❭'
 end
-if Get_Chat.permissions.can_send_Med_messages then
-Med = '❬ ✔️ ❭' else Med = '❬ ❌ ❭'
-end
 if Get_Chat.permissions.can_send_messages then
 messges = '❬ ✔️ ❭' else messges = '❬ ❌ ❭'
 end
@@ -8536,7 +8495,7 @@ end
 if Get_Chat.permissions.can_send_polls then
 polls = '❬ ✔️ ❭' else polls = '❬ ❌ ❭'
 end
-local permissions = '*\n᥀︙صلاحيات المجموعه :\n— — — — — — — — —'..'\n᥀︙ارسال الويب : '..web..'\n᥀︙تغيير معلومات المجموعه : '..info..'\n᥀︙اضافه مستخدمين : '..invite..'\n᥀︙تثبيت الرسائل : '..pin..'\n᥀︙ارسال الميديا : '..Med..'\n᥀︙ارسال الرسائل : '..messges..'\n᥀︙اضافه البوتات : '..other..'\n᥀︙ارسال استفتاء : '..polls..'*\n\n'
+local permissions = '*\n᥀︙صلاحيات المجموعه :\n— — — — — — — — —'..'\n᥀︙ارسال الويب : '..web..'\n᥀︙تغيير معلومات المجموعه : '..info..'\n᥀︙اضافه مستخدمين : '..invite..'\n᥀︙تثبيت الرسائل : '..pin..'\n᥀︙ارسال الميديا : '....'\n᥀︙ارسال الرسائل : '..messges..'\n᥀︙اضافه البوتات : '..other..'\n᥀︙ارسال استفتاء : '..polls..'*\n\n'
 local TextChat = '*\n᥀︙معلومات المجموعه :\n— — — — — — — — —'..' \n᥀︙عدد الادمنيه : ❬ '..Info_Chats.administrator_count..' ❭\n᥀︙عدد المحظورين : ❬ '..Info_Chats.banned_count..' ❭\n᥀︙عدد الاعضاء : ❬ '..Info_Chats.member_count..' ❭\n᥀︙عدد المقيديين : ❬ '..Info_Chats.restricted_count..' ❭\n᥀︙اسم المجموعه : ❬* ['..Get_Chat.title..']('..Info_Chats.invite_link.invite_link..')* ❭*'
 return LuaTele.sendText(msg_chat_id,msg_id, TextChat..permissions,"md",true)
 end
@@ -8564,9 +8523,6 @@ end
 if Get_Chat.permissions.can_pin_messages then
 pin = '❬ ✔️ ❭' else pin = '❬ ❌ ❭'
 end
-if Get_Chat.permissions.can_send_Med_messages then
-Med = '❬ ✔️ ❭' else Med = '❬ ❌ ❭'
-end
 if Get_Chat.permissions.can_send_messages then
 messges = '❬ ✔️ ❭' else messges = '❬ ❌ ❭'
 end
@@ -8590,9 +8546,6 @@ data = {
 },
 {
 {text = '- تثبيت الرسائل : '..pin, data =msg.sender.user_id..  '/pin'}, 
-},
-{
-{text = '- ارسال الميديا : '..Med, data =msg.sender.user_id..  '/Med'}, 
 },
 {
 {text = '- ارسال الرسائل : .'..messges, data =msg.sender.user_id..  '/messges'}, 
@@ -12220,7 +12173,7 @@ keyboard.inline_keyboard = {
 {text = '- اخفاء الامر ', callback_data =IdUser..'/delAmr'}, 
 },
 }
-https.request("https://api.telegram.org/bot"..Token.."/editMessageMed?chat_id="..ChatId.."&reply_to_message_id=0&Med="..ban.."&caption=".. URL.escape(ban_ns).."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+https.request("https://api.telegram.org/bot"..Token.."/editMessage?chat_id="..ChatId.."&reply_to_message_id=0="..ban.."&caption=".. URL.escape(ban_ns).."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 else
 return LuaTele.sendText(ChatId,Msg_id,'*᥀︙ لا توجد صوره ف حسابك*',"md",true) 
 end
@@ -13621,9 +13574,9 @@ if Text and Text:match('(%d+)/web') then
 local UserId = Text:match('(%d+)/web')
 if tonumber(IdUser) == tonumber(UserId) then
 if Getpermissions(ChatId).web == true then
-LuaTele.setChatPermissions(ChatId, Getpermissions(ChatId).messges, Getpermissions(ChatId).Med, Getpermissions(ChatId).polls, Getpermissions(ChatId).other, false, Getpermissions(ChatId).info, Getpermissions(ChatId).invite, Getpermissions(ChatId).pin)
+LuaTele.setChatPermissions(ChatId, Getpermissions(ChatId).messges,Getpermissions(ChatId).polls, Getpermissions(ChatId).other, false, Getpermissions(ChatId).info, Getpermissions(ChatId).invite, Getpermissions(ChatId).pin)
 else
-LuaTele.setChatPermissions(ChatId, Getpermissions(ChatId).messges, Getpermissions(ChatId).Med, Getpermissions(ChatId).polls, Getpermissions(ChatId).other, true, Getpermissions(ChatId).info, Getpermissions(ChatId).invite, Getpermissions(ChatId).pin)
+LuaTele.setChatPermissions(ChatId, Getpermissions(ChatId).messges,  Getpermissions(ChatId).polls, Getpermissions(ChatId).other, true, Getpermissions(ChatId).info, Getpermissions(ChatId).invite, Getpermissions(ChatId).pin)
 end
 Get_permissions(ChatId,IdUser,Msg_id)
 end
@@ -13631,9 +13584,9 @@ elseif Text and Text:match('(%d+)/info') then
 local UserId = Text:match('(%d+)/info')
 if tonumber(IdUser) == tonumber(UserId) then
 if Getpermissions(ChatId).info == true then
-LuaTele.setChatPermissions(ChatId, Getpermissions(ChatId).messges, Getpermissions(ChatId).Med, Getpermissions(ChatId).polls, Getpermissions(ChatId).other, Getpermissions(ChatId).web, false, Getpermissions(ChatId).invite, Getpermissions(ChatId).pin)
+LuaTele.setChatPermissions(ChatId, Getpermissions(ChatId).messges, Getpermissions(ChatId).polls, Getpermissions(ChatId).other, Getpermissions(ChatId).web, false, Getpermissions(ChatId).invite, Getpermissions(ChatId).pin)
 else
-LuaTele.setChatPermissions(ChatId, Getpermissions(ChatId).messges, Getpermissions(ChatId).Med, Getpermissions(ChatId).polls, Getpermissions(ChatId).other, Getpermissions(ChatId).web, true, Getpermissions(ChatId).invite, Getpermissions(ChatId).pin)
+LuaTele.setChatPermissions(ChatId, Getpermissions(ChatId).messges, Getpermissions(ChatId).polls, Getpermissions(ChatId).other, Getpermissions(ChatId).web, true, Getpermissions(ChatId).invite, Getpermissions(ChatId).pin)
 end
 Get_permissions(ChatId,IdUser,Msg_id)
 end
@@ -13641,9 +13594,9 @@ elseif Text and Text:match('(%d+)/invite') then
 local UserId = Text:match('(%d+)/invite')
 if tonumber(IdUser) == tonumber(UserId) then
 if Getpermissions(ChatId).invite == true then
-LuaTele.setChatPermissions(ChatId, Getpermissions(ChatId).messges, Getpermissions(ChatId).Med, Getpermissions(ChatId).polls, Getpermissions(ChatId).other, Getpermissions(ChatId).web, Getpermissions(ChatId).info, false, Getpermissions(ChatId).pin)
+LuaTele.setChatPermissions(ChatId, Getpermissions(ChatId).messges, Getpermissions(ChatId).polls, Getpermissions(ChatId).other, Getpermissions(ChatId).web, Getpermissions(ChatId).info, false, Getpermissions(ChatId).pin)
 else
-LuaTele.setChatPermissions(ChatId, Getpermissions(ChatId).messges, Getpermissions(ChatId).Med, Getpermissions(ChatId).polls, Getpermissions(ChatId).other, Getpermissions(ChatId).web, Getpermissions(ChatId).info, true, Getpermissions(ChatId).pin)
+LuaTele.setChatPermissions(ChatId, Getpermissions(ChatId).messges, Getpermissions(ChatId).polls, Getpermissions(ChatId).other, Getpermissions(ChatId).web, Getpermissions(ChatId).info, true, Getpermissions(ChatId).pin)
 end
 Get_permissions(ChatId,IdUser,Msg_id)
 end
@@ -13651,19 +13604,11 @@ elseif Text and Text:match('(%d+)/pin') then
 local UserId = Text:match('(%d+)/pin')
 if tonumber(IdUser) == tonumber(UserId) then
 if Getpermissions(ChatId).pin == true then
-LuaTele.setChatPermissions(ChatId, Getpermissions(ChatId).messges, Getpermissions(ChatId).Med, Getpermissions(ChatId).polls, Getpermissions(ChatId).other, Getpermissions(ChatId).web, Getpermissions(ChatId).info, Getpermissions(ChatId).invite, false)
+LuaTele.setChatPermissions(ChatId, Getpermissions(ChatId).messges, Getpermissions(ChatId).polls, Getpermissions(ChatId).other, Getpermissions(ChatId).web, Getpermissions(ChatId).info, Getpermissions(ChatId).invite, false)
 else
-LuaTele.setChatPermissions(ChatId, Getpermissions(ChatId).messges, Getpermissions(ChatId).Med, Getpermissions(ChatId).polls, Getpermissions(ChatId).other, Getpermissions(ChatId).web, Getpermissions(ChatId).info, Getpermissions(ChatId).invite, true)
+LuaTele.setChatPermissions(ChatId, Getpermissions(ChatId).messges, Getpermissions(ChatId).polls, Getpermissions(ChatId).other, Getpermissions(ChatId).web, Getpermissions(ChatId).info, Getpermissions(ChatId).invite, true)
 end
 Get_permissions(ChatId,IdUser,Msg_id)
-end
-elseif Text and Text:match('(%d+)/Med') then
-local UserId = Text:match('(%d+)/Med')
-if tonumber(IdUser) == tonumber(UserId) then
-if Getpermissions(ChatId).Med == true then
-LuaTele.setChatPermissions(ChatId, Getpermissions(ChatId).messges, false, Getpermissions(ChatId).polls, Getpermissions(ChatId).other, Getpermissions(ChatId).web, Getpermissions(ChatId).info, Getpermissions(ChatId).invite, Getpermissions(ChatId).pin)
-else
-LuaTele.setChatPermissions(ChatId, Getpermissions(ChatId).messges, true, Getpermissions(ChatId).polls, Getpermissions(ChatId).other, Getpermissions(ChatId).web, Getpermissions(ChatId).info, Getpermissions(ChatId).invite, Getpermissions(ChatId).pin)
 end
 Get_permissions(ChatId,IdUser,Msg_id)
 end
@@ -13671,9 +13616,9 @@ elseif Text and Text:match('(%d+)/messges') then
 local UserId = Text:match('(%d+)/messges')
 if tonumber(IdUser) == tonumber(UserId) then
 if Getpermissions(ChatId).messges == true then
-LuaTele.setChatPermissions(ChatId, false, Getpermissions(ChatId).Med, Getpermissions(ChatId).polls, Getpermissions(ChatId).other, Getpermissions(ChatId).web, Getpermissions(ChatId).info, Getpermissions(ChatId).invite, Getpermissions(ChatId).pin)
+LuaTele.setChatPermissions(ChatId, false, Getpermissions(ChatId).polls, Getpermissions(ChatId).other, Getpermissions(ChatId).web, Getpermissions(ChatId).info, Getpermissions(ChatId).invite, Getpermissions(ChatId).pin)
 else
-LuaTele.setChatPermissions(ChatId, true, Getpermissions(ChatId).Med, Getpermissions(ChatId).polls, Getpermissions(ChatId).other, Getpermissions(ChatId).web, Getpermissions(ChatId).info, Getpermissions(ChatId).invite, Getpermissions(ChatId).pin)
+LuaTele.setChatPermissions(ChatId, true, طGetpermissions(ChatId).polls, Getpermissions(ChatId).other, Getpermissions(ChatId).web, Getpermissions(ChatId).info, Getpermissions(ChatId).invite, Getpermissions(ChatId).pin)
 end
 Get_permissions(ChatId,IdUser,Msg_id)
 end
@@ -13681,9 +13626,9 @@ elseif Text and Text:match('(%d+)/other') then
 local UserId = Text:match('(%d+)/other')
 if tonumber(IdUser) == tonumber(UserId) then
 if Getpermissions(ChatId).other == true then
-LuaTele.setChatPermissions(ChatId, Getpermissions(ChatId).messges, Getpermissions(ChatId).Med, Getpermissions(ChatId).polls, false, Getpermissions(ChatId).web, Getpermissions(ChatId).info, Getpermissions(ChatId).invite, Getpermissions(ChatId).pin)
+LuaTele.setChatPermissions(ChatId, Getpermissions(ChatId).messges, Getpermissions(ChatId).polls, false, Getpermissions(ChatId).web, Getpermissions(ChatId).info, Getpermissions(ChatId).invite, Getpermissions(ChatId).pin)
 else
-LuaTele.setChatPermissions(ChatId, Getpermissions(ChatId).messges, Getpermissions(ChatId).Med, Getpermissions(ChatId).polls, true, Getpermissions(ChatId).web, Getpermissions(ChatId).info, Getpermissions(ChatId).invite, Getpermissions(ChatId).pin)
+LuaTele.setChatPermissions(ChatId, Getpermissions(ChatId).messges, Getpermissions(ChatId).polls, true, Getpermissions(ChatId).web, Getpermissions(ChatId).info, Getpermissions(ChatId).invite, Getpermissions(ChatId).pin)
 end
 Get_permissions(ChatId,IdUser,Msg_id)
 end
@@ -13691,9 +13636,9 @@ elseif Text and Text:match('(%d+)/polls') then
 local UserId = Text:match('(%d+)/polls')
 if tonumber(IdUser) == tonumber(UserId) then
 if Getpermissions(ChatId).polls == true then
-LuaTele.setChatPermissions(ChatId, Getpermissions(ChatId).messges, Getpermissions(ChatId).Med, false, Getpermissions(ChatId).other, Getpermissions(ChatId).web, Getpermissions(ChatId).info, Getpermissions(ChatId).invite, Getpermissions(ChatId).pin)
+LuaTele.setChatPermissions(ChatId, Getpermissions(ChatId).messges,  false, Getpermissions(ChatId).other, Getpermissions(ChatId).web, Getpermissions(ChatId).info, Getpermissions(ChatId).invite, Getpermissions(ChatId).pin)
 else
-LuaTele.setChatPermissions(ChatId, Getpermissions(ChatId).messges, Getpermissions(ChatId).Med, true, Getpermissions(ChatId).other, Getpermissions(ChatId).web, Getpermissions(ChatId).info, Getpermissions(ChatId).invite, Getpermissions(ChatId).pin)
+LuaTele.setChatPermissions(ChatId, Getpermissions(ChatId).messges,Getpermissions(ChatId).other, Getpermissions(ChatId).web, Getpermissions(ChatId).info, Getpermissions(ChatId).invite, Getpermissions(ChatId).pin)
 end
 Get_permissions(ChatId,IdUser,Msg_id)
 end
