@@ -10367,10 +10367,7 @@ end
 if text == "بوت" then
 local NamesBot = (Redis:get(TheDAHOOM.."DAHOOM:Name:Bot") or "!!")
 local BotName = {
-
 "تراك زودتها يانشبه !! "
-"لاتناديني بوت ياقليل الادب "
-"اذلف وفكني منك"
 
 }
 return LuaTele.sendText(msg_chat_id,msg_id,BotName[math.random(#BotName)],"md",true)   
