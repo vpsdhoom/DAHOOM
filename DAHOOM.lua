@@ -10360,7 +10360,6 @@ if text == (Redis:get(TheDAHOOM.."DAHOOM:Name:Bot") or "دحوم") then
 local NamesBot = (Redis:get(TheDAHOOM.."DAHOOM:Name:Bot") or "دحوم")
 local NameBots = {
 "ها شتريد؟"
-"تبي تلعب معي ؟!"
 "ابعد عني فيك كورونا 😒 "
 "عيون دحوم امر تدلل"
 }
